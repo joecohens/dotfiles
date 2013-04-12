@@ -1,20 +1,27 @@
 #Aliases
-##ls, the common ones I use a lot shortened for rapid fire usage
-alias ls='ls -G' #I like color
-alias l='ls -lFh'     #size,show type,human readable
-alias la='ls -lAFh'   #long list,show almost all,show type,human readable
-alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
 
-alias phpmamp='/Applications/MAMP/bin/php/php5.3.6/bin/php'
-alias runmongo='mongod run --config /usr/local/etc/mongod.conf'
-alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias redis='redis-server /usr/local/etc/redis.conf'
-#alias vim='/Applications/MacVim.app/Contents/MacOS/MacVim'
-#alias vim='mvim -v'
-alias htdocs='cd /Applications/MAMP/htdocs/'
-alias emacs="/usr/local/Cellar/emacs/24.1/Emacs.app/Contents/MacOS/Emacs -nw"
-alias start_haxm="sudo kextload -b com.intel.kext.intelhaxm"
-alias stop_haxm="sudo kextunload -b com.intel.kext.intelhaxm"
+# Basicos
 alias c="clear"
+
+# Editar dotfiles con Textmate
+alias dotfiles='mate ~/.dotfiles/'
+
+# Start MongoDB instalado con homebrew
+alias mongodb='mongod run --config /usr/local/etc/mongod.conf'
+
+# Start y Stop Postgres instalado con homebrew
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+# Start Redir instalado con homebrew
+alias redis='redis-server /usr/local/etc/redis.conf'
+
+# Ir a htdoc de MAMP
+alias htdocs='cd /Applications/MAMP/htdocs/'
+
+# Laravel artisan
 alias art="php artisan"
+
+# HAXM para simulador de Android Intel
+alias haxmstart="sudo kextload -b com.intel.kext.intelhaxm"
+alias haxmstop="sudo kextunload -b com.intel.kext.intelhaxm"

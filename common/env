@@ -1,5 +1,4 @@
-# Load my config
-# export PATH=/usr/local/bin:/usr/local/share/python:/usr/local/sbin:$PATH 
+# Configuración de PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -7,6 +6,7 @@ export PATH=$PATH:~/.dotfiles
 export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS
 export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:/Applications/MAMP/Library/bin:$PATH
 
+# Configuración de Lenguaje para python
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -24,10 +24,8 @@ if [ -f `brew --prefix`/etc/bash-completion ]; then
  . `brew --prefix`/etc/bash-completion
 fi
 
-# Setting up the VirtualEnv
+# Setting up the VirtualEnv for python
 export WORKON_HOME=$HOME/.virtualenvs
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-# export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
