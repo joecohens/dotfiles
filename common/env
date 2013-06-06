@@ -1,36 +1,29 @@
 # Configuración de PATH
-export PATH=/usr/local/bin:$PATH
+
 export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PATH=$PATH:~/.dotfiles
-export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:/Applications/MAMP/Library/bin:$PATH
+export PATH=/Applications/VirtualBox.app/Contents/MacOS:$PATH
 
 # Configuración de Lenguaje para python
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
-# export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.1
-
 #textmate
 export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH=${PATH}:/usr/local/mysql/bin
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-if [ -f `brew --prefix`/etc/bash-completion ]; then
- . `brew --prefix`/etc/bash-completion
-fi
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Setting up the VirtualEnv for python
 export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
-if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+	source /usr/local/bin/virtualenvwrapper.sh
 else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
+	echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
