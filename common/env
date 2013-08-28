@@ -15,6 +15,11 @@ export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+export NVM_HOME="$HOME/.nvm"
+if [[ -f "$NVM_HOME/nvm.sh" ]]; then 
+    source "$NVM_HOME/nvm.sh"
+fi
+
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Setting up the VirtualEnv for python
