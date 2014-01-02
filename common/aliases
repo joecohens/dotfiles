@@ -18,6 +18,7 @@ alias redis='redis-server /usr/local/etc/redis.conf'
 
 # Ir a htdoc de MAMP
 alias htdocs='cd /Applications/MAMP/htdocs/'
+alias phpunit='vendor/bin/phpunit'
 
 # Laravel artisan
 alias art="php artisan"
