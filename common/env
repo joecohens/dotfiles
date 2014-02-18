@@ -1,25 +1,14 @@
-# Configuración de PATH
+# Configuraciones de PATH
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
-#export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:/Applications/MAMP/Library/bin:$PATH
-export PATH=/Applications/VirtualBox.app/Contents/MacOS:$PATH
-
-# Configuración de Lenguaje para python
+# Configuración de Lenguaje
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-#textmate
-export EDITOR="/usr/local/bin/mate -w"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export NVM_HOME="$HOME/.nvm"
-if [[ -f "$NVM_HOME/nvm.sh" ]]; then 
-    source "$NVM_HOME/nvm.sh"
-fi
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
 # Setting up the VirtualEnv for python
 export WORKON_HOME=$HOME/.virtualenvs

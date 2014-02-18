@@ -1,4 +1,4 @@
-#Aliases
+# Aliases
 
 # Basicos
 alias c="clear"
@@ -6,23 +6,5 @@ alias c="clear"
 # Editar dotfiles con Textmate
 alias dotfiles='mate ~/.dotfiles/'
 
-# Start MongoDB instalado con homebrew
-alias mongodb='mongod run --config /usr/local/etc/mongod.conf'
-
-# Start y Stop Postgres instalado con homebrew
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
-# Start Redir instalado con homebrew
-alias redis='redis-server /usr/local/etc/redis.conf'
-
-# Ir a htdoc de MAMP
-alias htdocs='cd /Applications/MAMP/htdocs/'
-alias phpunit='vendor/bin/phpunit'
-
-# Laravel artisan
+# Laravel
 alias art="php artisan"
-
-# HAXM para simulador de Android Intel
-alias haxmstart="sudo kextload -b com.intel.kext.intelhaxm"
-alias haxmstop="sudo kextunload -b com.intel.kext.intelhaxm"
