@@ -1,14 +1,14 @@
 # Configuraciones de PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Configuración de Lenguaje
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Scripting RVM, NVM, GVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # Setting up the VirtualEnv for python
 export WORKON_HOME=$HOME/.virtualenvs

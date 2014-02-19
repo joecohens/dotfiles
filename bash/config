@@ -120,7 +120,7 @@ BRANCH=''
 
   # Set the bash prompt variable.
   PS1="
-${PYTHON_VIRTUALENV}${CYAN}\u:${LIGHT_GREEN}\w ${BWHITE}$(vcprompt)${COLOR_NONE} ${BRANCH}
+${PYTHON_VIRTUALENV}${CYAN}\u:${LIGHT_GREEN}\w ${BWHITE}${COLOR_NONE} ${BRANCH}
 ${PROMPT_SYMBOL} "
 }
 
