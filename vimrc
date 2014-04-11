@@ -84,6 +84,7 @@ Bundle 'sunaku/vim-ruby-minitest.git'
 " Bundle 'guns/vim-clojure-static.git'
 " Bundle 'elixir-lang/vim-elixir.git'
 Bundle 'jnwhiteh/vim-golang.git'
+Bundle 'hhvm/vim-hack.git'
 " Snippets
 Bundle 'joecohens/joe-snippets-vim'
 Bundle 'markwu/vim-laravel4-snippets'
