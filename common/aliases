@@ -4,7 +4,18 @@
 alias c="clear"
 
 # Editar dotfiles con Textmate
-alias dotfiles='mate ~/.dotfiles/'
+alias dotfiles='vim ~/.dotfiles/'
 
 # Laravel
 alias art="php artisan"
+
+# PHP testing
+alias phpunit="vendor/bin/phpunit"
+alias phpspec="vendor/bin/phpspec"
+alias codecept="vendor/bin/codecept"
+alias t="vendor/bin/phpunit"
+alias ts="vendor/bin/phpspec run"
+alias tc="vendor/bin/codecept run"
+
+# Homestead
+alias vm='ssh vagrant@127.0.0.1 -p 2222'

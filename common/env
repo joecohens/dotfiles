@@ -1,22 +1,25 @@
 # Configuraciones de PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php5.6.6/bin:$PATH"
 
 # Configuración de Lenguaje
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 
-# Scripting RVM, NVM, GVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# Scripting RVM, NVM, GVM, Composer, Heroku
+export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Setting up the VirtualEnv for python
 export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-	source /usr/local/bin/virtualenvwrapper.sh
+if [[ -r "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+	source "/usr/local/bin/virtualenvwrapper.sh"
 else
 	echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
