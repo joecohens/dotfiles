@@ -1,6 +1,6 @@
 # Configuraciones de PATH
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/Applications/MAMP/bin/php/php5.6.7/bin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php5.6.10/bin:$PATH"
 
 # Configuración de Lenguaje
 export LC_ALL="en_US.UTF-8"
