@@ -1,306 +1,216 @@
 set encoding=utf-8
-set nocompatible              " be iMproved
-filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"---------Vundle--------"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+"---------Plugins--------"
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'mattn/gist-vim'
+Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-dispatch'
+Plugin 'terryma/vim-multiple-cursors'
+"---------Themes--------"
+Plugin 'chriskempson/base16-vim'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'vim-scripts/xoria256.vim'
+Plugin 'daylerees/colour-schemes', { 'rtp': 'vim-themes/' }
+"---------Lang Support--------"
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-markdown'
+Plugin 'nono/vim-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-git'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'chrisbra/csv.vim.git'
+Plugin 'mmalecki/vim-node.js'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'groenewege/vim-less'
+Plugin 'jimenezrick/vimerl'
+Plugin 'guns/vim-clojure-static'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'hhvm/vim-hack'
+"---------Snippets--------"
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'joecohens/joe-snippets-vim'
 
-" My bundles here:
-"
-" original repos on GitHub
-Bundle 'mileszs/ack.vim'
-" Vim Extras
-Bundle 'kien/ctrlp.vim'
-Bundle 'ddollar/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-" Snippets
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'skalnik/vim-vroom'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tsaleh/vim-matchit'
-Bundle 'sjl/gundo.vim'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'tpope/vim-endwise'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'vim-scripts/vimwiki'
-Bundle 'ap/vim-css-color'
-Bundle 'rgarver/Kwbd.vim'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-dispatch'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'thinca/vim-visualstar'
-" vim-scripts repos
-" non-GitHub repos
-" Git repos on your local machine (i.e. when working on your own plugin)
-" a bunch of colorschemes + a gui menu listing them
-Bundle 'chriskempson/base16-vim'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'vim-scripts/xoria256.vim'
-Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
-" Langs
-Bundle 'tpope/vim-haml.git'
-Bundle 'pangloss/vim-javascript.git'
-Bundle 'tpope/vim-cucumber.git'
-Bundle 'tpope/vim-markdown.git'
-Bundle 'ajf/puppet-vim.git'
-Bundle 'rosstimson/scala-vim-support.git'
-Bundle 'nono/vim-handlebars.git'
-Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-git.git'
-Bundle 'timcharper/textile.vim.git'
-Bundle 'skwp/vim-rspec.git'
-Bundle 'cakebaker/scss-syntax.vim.git'
-Bundle 'chrisbra/csv.vim.git'
-Bundle 'mmalecki/vim-node.js.git'
-Bundle 'vim-ruby/vim-ruby.git'
-Bundle 'vim-scripts/Arduino-syntax-file.git'
-Bundle 'groenewege/vim-less.git'
-Bundle 'wlangstroth/vim-haskell.git'
-Bundle 'slim-template/vim-slim.git'
-Bundle 'jimenezrick/vimerl.git'
-Bundle 'sunaku/vim-ruby-minitest.git'
-" Bundle 'guns/vim-clojure-static.git'
-" Bundle 'elixir-lang/vim-elixir.git'
-Bundle 'jnwhiteh/vim-golang.git'
-Bundle 'hhvm/vim-hack.git'
-" Snippets
-Bundle 'joecohens/joe-snippets-vim'
-Bundle 'markwu/vim-laravel4-snippets'
-" ...
-
-filetype plugin indent on     " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+" Put your non-Plugin stuff after this line
 
+"---------Theme--------"
+syntax on
 set t_Co=256
-let base16colorspace=256  " Access colors present in 256 colorspace
+let base16colorspace=256                    " Access colors present in 256 colorspace
 set background=dark
 colorscheme xoria256
-syntax on
 
 set guifont=Menlo\ for\ Powerline:h14
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
 set linespace=15
- 
-set showmode                    " always show what mode we're currently editing in
-set nowrap                      " don't wrap lines
-set tabstop=4                   " a tab is four spaces
-set smarttab
-set smartindent
-"set tags=tags
-set tags=.tags
-set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
-set expandtab                   " expand tabs by default (overloadable per file type later)
-set shiftwidth=4                " number of spaces to use for autoindenting
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set autoindent                  " always set autoindenting on
-set copyindent                  " copy the previous indentation on autoindenting
-set number                      " always show line numbers
-set ignorecase                  " ignore case when searching
-set smartcase                   " ignore case if search pattern is all lowercase,
-set timeout timeoutlen=200 ttimeoutlen=100
-set visualbell           " don't beep
-set noerrorbells         " don't beep
-set autowrite  "Save on buffer switch
-set mouse=a
- 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
- 
-" Fast saves
-nmap <leader>w :w!<cr>
- 
-" Down is really the next line
-nnoremap j gj
-nnoremap k gk
- 
-"Easy escaping to normal model
-imap jj <esc>
- 
-"Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
- 
-"easier window navigation
- 
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
- 
-"Resize vsplit
-nmap <C-v> :vertical resize +5<cr>
-nmap 25 :vertical resize 40<cr>
-nmap 50 <c-w>=
-nmap 75 :vertical resize 120<cr>
- 
-nmap <C-b> :NERDTreeToggle<cr>
-let NERDTreeShowHidden=1
 
-"Load the current buffer in Chrome
-nmap ,c :!open -a Google\ Chrome<cr>
- 
-"Show (partial) command in the status line
-set showcmd
- 
-" Create split below
-nmap :sp :rightbelow sp<cr>
- 
-" Quickly go forward or backward to buffer
-nmap :bp :BufSurfBack<cr>
-nmap :bn :BufSurfForward<cr>
- 
-highlight Search cterm=underline
- 
-" Swap files out of the project root
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-
-" Easy motion stuff
-" let g:EasyMotion_leader_key = '<Leader>'
- 
 " Powerline (Fancy thingy at bottom stuff)
 let g:Powerline_symbols = 'fancy'
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set laststatus=2                            " Always show the statusline
+set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-" Surround Vim
-vmap s S
+"---------General Settings--------"
+let mapleader = ","
+let g:mapleader = ","
 
-" BufferGator
-let g:buffergator_suppress_keymaps = 1
+" Swap files out of the project root
+set backupdir=~/.dotfiles/vim/backup//
+set directory=~/.dotfiles/vim/swap//
 
-autocmd cursorhold * set nohlsearch
-autocmd cursormoved * set hlsearch
- 
-" Remove search results
-command! H let @/=""
- 
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+set nowrap                                  " don't wrap lines
+set tabstop=4                               " a tab is four spaces
+set smarttab
+set smartindent
+set tags=.tags
+set softtabstop=4                           " when hitting <BS>, pretend like a tab is removed, even if spaces
+set shiftwidth=4                            " number of spaces to use for autoindenting
+set expandtab                               " expand tabs by default (overloadable per file type later)
+set shiftround                              " use multiple of shiftwidth when indenting with '<' and '>'
+set backspace=indent,eol,start              " allow backspacing over everything in insert mode
+set autoindent                              " always set autoindenting on
+set copyindent                              " copy the previous indentation on autoindenting
+set number                                  " always show line numbers
+set ignorecase                              " ignore case when searching
+set smartcase                               " ignore case if search pattern is all lowercase,
+set visualbell                              " don't beep
+set noerrorbells                            " don't beep
+set autowrite                               " Save on buffer switch
+set mouse=a
+set showcmd                                 " Show (partial) command in the status line
 
-" Run PHPUnit tests
-map <Leader>t :!phpunit %<cr>
- 
-" Abbreviations
-abbrev pft PHPUnit_Framework_TestCase
- 
-abbrev gm !php artisan generate:model
-abbrev gc !php artisan generate:controller
-abbrev gmig !php artisan generate:migration
- 
-" Auto-remove trailing spaces
-autocmd BufWritePre *.php :%s/\s\+$//e
- 
-" Edit todo list for project
-nmap ,todo :e todo.txt<cr>
+"---------Search--------"
+set hlsearch
+set incsearch
 
-" Laravel framework commons
-nmap <leader>lr :e app/routes.php<cr>
-nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
-nmap <leader>lcd :e app/config/database.php<cr>
-nmap <leader>lc :e composer.json<cr>
- 
-" Concept - load underlying class for Laravel
-function! FacadeLookup()
-    let facade = input('Facade Name: ')
-    let classes = {
-\       'Form': 'Html/FormBuilder.php',
-\       'Html': 'Html/HtmlBuilder.php',
-\       'File': 'Filesystem/Filesystem.php',
-\       'Eloquent': 'Database/Eloquent/Model.php'
-\   }
- 
-    execute ":edit vendor/laravel/framework/src/Illuminate/" . classes[facade]
-endfunction
-nmap ,lf :call FacadeLookup()<cr>
- 
-" CtrlP Stuff
- 
-" Familiar commands for file/symbol browsing
-map <D-p> :CtrlP<cr>
-" map <C-r> :CtrlPBufTag<cr>
- 
+"Add simple highlight removal.
+nmap <Leader><space> :nohlsearch<cr>
+
+"---------Mappings--------"
+nmap <Leader>ev :tabedit $MYVIMRC<cr>       " Make it easy to edit the Vimrc file.
+nmap :ed :edit %:p:h/                       " Create/edit file in the current directory
+nmap <leader>w :w!<cr>                      " Fast saves
+imap jj <esc>                               " Easy escaping to normal model
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>          " Auto change directory to match current file ,cd
+
+nmap vs :vsplit<cr>                         " Open vertical split
+nmap sp :split<cr>                          " Open horizontal split
+nmap :sp :rightbelow sp<cr>                 " preate split below
+
+nmap <C-h> <C-w>h                           " Window navigation
+nmap <C-j> <C-w>j                           " Window navigation
+nmap <C-k> <C-w>k                           " Window navigation
+nmap <C-l> <C-w>l                           " Window navigation
+
+nmap <C-v> :vertical resize +5<cr>          " Resize vsplit
+nmap 25 :vertical resize 40<cr>             " Resize vsplit
+nmap 50 <c-w>=                              " Resize vsplit
+nmap 75 :vertical resize 120<cr>            " Resize vsplit
+
+nmap <C-b> :NERDTreeToggle<cr>              " Toggle nerd tree
+let NERDTreeShowHidden=1
+
+nmap ,c :!open -a Google\ Chrome<cr>        " Load the current buffer in Chrome
+
+nmap :bp :BufSurfBack<cr>                   " Quickly go backward to buffer
+nmap :bn :BufSurfForward<cr>                " Quickly go forward to buffer
+
+vmap s S                                    " Surround Vim
+
+"---------Auto-Commands--------"
+
+"Automatically source the Vimrc file on save.
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost .vimrc source %
+augroup END
+
+"---------Plugins Config--------"
+map <D-p> :CtrlP<cr>                        " Familiar commands for file/symbol browsing
+
 " I don't want to pull up these folders/files when calling CtrlP
 set wildignore+=*/vendor/**
-set wildignore+=*/public/forum/**
-set wildignore+=*/app/assets/vendor/components/**
- 
-" Open splits
-nmap vs :vsplit<cr>
-nmap sp :split<cr>
- 
-" Create/edit file in the current directory
-nmap :ed :edit %:p:h/
- 
+set wildignore+=*/node_modules/**
+set wildignore+=*/bower_components/**
+
+"---------PHPhelpers--------"
+map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
+abbrev pft PHPUnit_Framework_TestCase       " Abbreviations
+
+abbrev gm !php artisan make:model
+abbrev gc !php artisan make:controller
+abbrev gmig !php artisan make:migration
+
+autocmd BufWritePre *.php :%s/\s\+$//e      " Auto-remove trailing spaces
+
+" Laravel framework commons
+nmap <leader>lca :e config/app.php<cr>
+nmap <leader>lc :e composer.json<cr>
+
 " Prepare a new PHP class
 function! Class()
     let name = input('Class name? ')
     let namespace = input('Any Namespace? ')
- 
+
     if strlen(namespace)
         exec 'normal i<?php namespace ' . namespace . ';
     else
         exec 'normal i<?php
     endif
- 
+
     " Open class
     exec 'normal iclass ' . name . ' {^M}^[O^['
-    
+
     exec 'normal i^M    public function __construct()^M{^M ^M}^['
 endfunction
 nmap ,1  :call Class()<cr>
- 
+
 " Add a new dependency to a PHP class
 function! AddDependency()
     let dependency = input('Var Name: ')
     let namespace = input('Class Path: ')
- 
+
     let segments = split(namespace, '\')
     let typehint = segments[-1]
- 
+
     exec 'normal gg/construct^M:H^Mf)i, ' . typehint . ' $' . dependency . '^[/}^>O$this->^[a' . dependency . ' = $' . dependency . ';^[?{^MkOprotected $' . dependency . ';^M^[?{^MOuse ' . namespace . ';^M^['
- 
+
     " Remove opening comma if there is only one dependency
     exec 'normal :%s/(, /(/g
 '
 endfunction
 nmap ,2  :call AddDependency()<cr>
-

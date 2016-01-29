@@ -1,9 +1,9 @@
 # Aliases
 
-# Basicos
+# Basics
 alias c="clear"
 
-# Editar dotfiles con Textmate
+# Edit dotfiles with vim
 alias dotfiles='vim ~/.dotfiles/'
 
 # Laravel
@@ -13,7 +13,7 @@ alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
 alias phpspec="vendor/bin/phpspec"
 alias codecept="vendor/bin/codecept"
-alias t="vendor/bin/phpunit"
+alias t="clear && vendor/bin/phpunit"
 alias ts="vendor/bin/phpspec run"
 alias tc="vendor/bin/codecept run"
 
