@@ -1,4 +1,6 @@
 set encoding=utf-8
+set nocompatible
+filetype off
 
 "---------Vundle--------"
 " set the runtime path to include Vundle and initialize
@@ -17,6 +19,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -70,19 +73,26 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "---------Theme--------"
-syntax on
+syntax enable
 set t_Co=256
 let base16colorspace=256                    " Access colors present in 256 colorspace
 set background=dark
 colorscheme xoria256
+set noerrorbells visualbell t_vb=           " Disable error bells
 
 set guifont=Menlo\ for\ Powerline:h14
+set guioptions-=e
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
 set linespace=15
 
 " Powerline (Fancy thingy at bottom stuff)
 let g:Powerline_symbols = 'fancy'
 set laststatus=2                            " Always show the statusline
 set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set showcmd                                 " Show (partial) command in the status line
 
 "---------General Settings--------"
 let mapleader = ","
@@ -92,26 +102,11 @@ let g:mapleader = ","
 set backupdir=~/.dotfiles/vim/backup//
 set directory=~/.dotfiles/vim/swap//
 
-set nowrap                                  " don't wrap lines
-set tabstop=4                               " a tab is four spaces
-set smarttab
-set smartindent
-set tags=.tags
-set softtabstop=4                           " when hitting <BS>, pretend like a tab is removed, even if spaces
-set shiftwidth=4                            " number of spaces to use for autoindenting
-set expandtab                               " expand tabs by default (overloadable per file type later)
-set shiftround                              " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start              " allow backspacing over everything in insert mode
-set autoindent                              " always set autoindenting on
-set copyindent                              " copy the previous indentation on autoindenting
 set number                                  " always show line numbers
-set ignorecase                              " ignore case when searching
-set smartcase                               " ignore case if search pattern is all lowercase,
-set visualbell                              " don't beep
-set noerrorbells                            " don't beep
-set autowrite                               " Save on buffer switch
+set backspace=indent,eol,start              " allow backspacing over everything in insert mode
+set nowrap                                  " don't wrap lines
 set mouse=a
-set showcmd                                 " Show (partial) command in the status line
+set tags=.tags
 
 "---------Search--------"
 set hlsearch
@@ -120,29 +115,23 @@ set incsearch
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 
+"---------Splits--------"
+set splitbelow                               " Make splits default to below...
+set splitright                               " And to the right. This feels more natural.
+
+"We'll set simpler mappings to switch between splits.
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
 "---------Mappings--------"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>       " Make it easy to edit the Vimrc file.
 nmap :ed :edit %:p:h/                       " Create/edit file in the current directory
 nmap <leader>w :w!<cr>                      " Fast saves
 imap jj <esc>                               " Easy escaping to normal model
+nmap <leader>f :tag<space>                  " Searching with ctags
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>          " Auto change directory to match current file ,cd
-
-nmap vs :vsplit<cr>                         " Open vertical split
-nmap sp :split<cr>                          " Open horizontal split
-nmap :sp :rightbelow sp<cr>                 " preate split below
-
-nmap <C-h> <C-w>h                           " Window navigation
-nmap <C-j> <C-w>j                           " Window navigation
-nmap <C-k> <C-w>k                           " Window navigation
-nmap <C-l> <C-w>l                           " Window navigation
-
-nmap <C-v> :vertical resize +5<cr>          " Resize vsplit
-nmap 25 :vertical resize 40<cr>             " Resize vsplit
-nmap 50 <c-w>=                              " Resize vsplit
-nmap 75 :vertical resize 120<cr>            " Resize vsplit
-
-nmap <C-b> :NERDTreeToggle<cr>              " Toggle nerd tree
-let NERDTreeShowHidden=1
 
 nmap ,c :!open -a Google\ Chrome<cr>        " Load the current buffer in Chrome
 
@@ -155,17 +144,25 @@ vmap s S                                    " Surround Vim
 
 "Automatically source the Vimrc file on save.
 augroup autosourcing
-	autocmd!
-	autocmd BufWritePost .vimrc source %
+    autocmd!
+    autocmd BufWritePost .vimrc source %
 augroup END
 
 "---------Plugins Config--------"
 map <D-p> :CtrlP<cr>                        " Familiar commands for file/symbol browsing
+map <D-r> :CtrlPBufTag<cr>                  " Familiar commands for file/symbol browsing
+map <D-e> :CtrlPMRUFiles<cr>                " Browse most recent files
+
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\bower_components\|git'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 " I don't want to pull up these folders/files when calling CtrlP
 set wildignore+=*/vendor/**
 set wildignore+=*/node_modules/**
 set wildignore+=*/bower_components/**
+
+nmap <D-1> :NERDTreeToggle<cr>              " Toggle nerd tree
+let NERDTreeHijackNetrw = 0
 
 "---------PHPhelpers--------"
 map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
