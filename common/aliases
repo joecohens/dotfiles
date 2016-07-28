@@ -20,3 +20,6 @@ alias tc="vendor/bin/codecept run"
 # Homestead
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
+# Git
+alias nah='git reset --hard; git clean -df;'
