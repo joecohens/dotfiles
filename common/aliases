@@ -8,6 +8,7 @@ alias dotfiles='vim ~/.dotfiles/'
 
 # Laravel
 alias art="php artisan"
+alias tinker="php artisan tinker"
 
 # PHP testing
 alias phpunit="vendor/bin/phpunit"
