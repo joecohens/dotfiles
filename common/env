@@ -7,12 +7,10 @@ export LANG="en_US.UTF-8"
 
 # Scripting RVM, NVM, GVM, Composer, Heroku
 export PATH="~/.composer/vendor/bin:$PATH"
-export PATH="$HOME/.phpenv/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-if which phpenv > /dev/null; then eval "$(phpenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Setting up the VirtualEnv for python
