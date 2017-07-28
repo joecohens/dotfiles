@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 "---------Plugins--------"
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-unimpaired'
@@ -29,27 +29,32 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-dispatch'
 Plugin 'terryma/vim-multiple-cursors'
 "---------Themes--------"
-Plugin 'chriskempson/base16-vim'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'vim-scripts/xoria256.vim'
-Plugin 'daylerees/colour-schemes', { 'rtp': 'vim-themes/' }
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/vim-tomorrow-theme'
+" Plugin 'vim-scripts/xoria256.vim'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'joshdick/onedark.vim'
+" Plugin 'herrbischoff/cobalt2.vim'
+" Plugin 'daylerees/colour-schemes', { 'rtp': 'vim-themes/' }
 "---------Lang Support--------"
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-markdown'
-Plugin 'nono/vim-handlebars'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-git'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'chrisbra/csv.vim.git'
-Plugin 'mmalecki/vim-node.js'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'groenewege/vim-less'
-Plugin 'jimenezrick/vimerl'
-Plugin 'guns/vim-clojure-static'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'hhvm/vim-hack'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'posva/vim-vue'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'nono/vim-handlebars'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-git'
+" Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'chrisbra/csv.vim.git'
+" Plugin 'mmalecki/vim-node.js'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'groenewege/vim-less'
+" Plugin 'jimenezrick/vimerl'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'elixir-lang/vim-elixir'
+" Plugin 'jnwhiteh/vim-golang'
+" Plugin 'hhvm/vim-hack'
 "---------Snippets--------"
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -73,14 +78,22 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "---------Theme--------"
+
+" Airline (Fancy thingy at bottom stuff)
+set laststatus=2                            " Always show the statusline
+set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set showcmd                                 " Show (partial) command in the status line
+
 syntax enable
-set t_Co=256
-let base16colorspace=256                    " Access colors present in 256 colorspace
+set termguicolors
 set background=dark
-colorscheme xoria256
+let g:onedark_termcolors=254
+let g:onedark_terminal_italics=1
+" let g:airline_theme='cobalt2'
+" colorscheme cobalt2
 set noerrorbells visualbell t_vb=           " Disable error bells
 
-set guifont=Menlo\ for\ Powerline:h14
+set guifont=Operator\ Mono:h15
 set guioptions-=e
 set guioptions-=l
 set guioptions-=L
@@ -88,11 +101,8 @@ set guioptions-=r
 set guioptions-=R
 set linespace=15
 
-" Powerline (Fancy thingy at bottom stuff)
-let g:Powerline_symbols = 'fancy'
-set laststatus=2                            " Always show the statusline
-set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set showcmd                                 " Show (partial) command in the status line
+set list
+set listchars=tab:>.,trail:.,extends:\#,nbsp:.
 
 "---------General Settings--------"
 let mapleader = ","
@@ -175,6 +185,7 @@ abbrev gmig !php artisan make:migration
 autocmd BufWritePre *.php :%s/\s\+$//e      " Auto-remove trailing spaces
 
 " Laravel framework commons
+"
 nmap <leader>lca :e config/app.php<cr>
 nmap <leader>lc :e composer.json<cr>
 

@@ -4,6 +4,9 @@
 alias c="clear"
 
 # Edit dotfiles with vim
+alias vim='nvim'
+
+# Edit dotfiles with vim
 alias dotfiles='vim ~/.dotfiles/'
 
 # Laravel
@@ -14,7 +17,7 @@ alias tinker="php artisan tinker"
 alias phpunit="vendor/bin/phpunit"
 alias phpspec="vendor/bin/phpspec"
 alias codecept="vendor/bin/codecept"
-alias t="clear && vendor/bin/phpunit"
+alias t="clear && vendor/bin/phpunit -d memory_limit=512M"
 alias ts="vendor/bin/phpspec run"
 alias tc="vendor/bin/codecept run"
 
