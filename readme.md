@@ -39,6 +39,12 @@ bash-it enable completion git brew composer npm
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ```
 
+### NeoVim
+
+```bash
+ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
+```
+
 ### Extras
 
 ```bash
