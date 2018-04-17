@@ -17,17 +17,17 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'ervandew/supertab'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'mattn/gist-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-dispatch'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'w0rp/ale'
 "---------Themes--------"
 " Plugin 'chriskempson/base16-vim'
 " Plugin 'chriskempson/vim-tomorrow-theme'
@@ -38,23 +38,6 @@ Plugin 'joshdick/onedark.vim'
 " Plugin 'daylerees/colour-schemes', { 'rtp': 'vim-themes/' }
 "---------Lang Support--------"
 Plugin 'sheerun/vim-polyglot'
-Plugin 'posva/vim-vue'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'tpope/vim-markdown'
-" Plugin 'nono/vim-handlebars'
-" Plugin 'kchmck/vim-coffee-script'
-" Plugin 'tpope/vim-rails'
-" Plugin 'tpope/vim-git'
-" Plugin 'cakebaker/scss-syntax.vim'
-" Plugin 'chrisbra/csv.vim.git'
-" Plugin 'mmalecki/vim-node.js'
-" Plugin 'vim-ruby/vim-ruby'
-" Plugin 'groenewege/vim-less'
-" Plugin 'jimenezrick/vimerl'
-" Plugin 'guns/vim-clojure-static'
-" Plugin 'elixir-lang/vim-elixir'
-" Plugin 'jnwhiteh/vim-golang'
-" Plugin 'hhvm/vim-hack'
 "---------Snippets--------"
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -93,7 +76,7 @@ let g:onedark_terminal_italics=1
 " colorscheme cobalt2
 set noerrorbells visualbell t_vb=           " Disable error bells
 
-set guifont=Operator\ Mono:h15
+set guifont=Menlo:h15
 set guioptions-=e
 set guioptions-=l
 set guioptions-=L
@@ -111,6 +94,9 @@ let g:mapleader = ","
 " Swap files out of the project root
 set backupdir=~/.dotfiles/vim/backup//
 set directory=~/.dotfiles/vim/swap//
+
+set undofile 
+set undodir=~/.vim-undo
 
 set number                                  " always show line numbers
 set backspace=indent,eol,start              " allow backspacing over everything in insert mode
@@ -153,41 +139,37 @@ vmap s S                                    " Surround Vim
 "---------Auto-Commands--------"
 
 "Automatically source the Vimrc file on save.
-augroup autosourcing
+augroup autosourcin
     autocmd!
-    autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost ~/.vimrc source %
 augroup END
 
 "---------Plugins Config--------"
-map <D-p> :CtrlP<cr>                        " Familiar commands for file/symbol browsing
-map <D-r> :CtrlPBufTag<cr>                  " Familiar commands for file/symbol browsing
-map <D-e> :CtrlPMRUFiles<cr>                " Browse most recent files
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\bower_components\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
 
-" I don't want to pull up these folders/files when calling CtrlP
-set wildignore+=*/vendor/**
-set wildignore+=*/node_modules/**
-set wildignore+=*/bower_components/**
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 
-nmap <D-1> :NERDTreeToggle<cr>              " Toggle nerd tree
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
+endif
+
+nmap <Leader>n :NERDTreeToggle<cr>          " Toggle nerd tree
+nmap <Leader>r :NERDTreeFind<cr>
 let NERDTreeHijackNetrw = 0
+
+let g:jsx_ext_required = 0                  " Allow JSX in normal JS files
 
 "---------PHPhelpers--------"
 map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
-abbrev pft PHPUnit_Framework_TestCase       " Abbreviations
-
-abbrev gm !php artisan make:model
-abbrev gc !php artisan make:controller
-abbrev gmig !php artisan make:migration
-
 autocmd BufWritePre *.php :%s/\s\+$//e      " Auto-remove trailing spaces
-
-" Laravel framework commons
-"
-nmap <leader>lca :e config/app.php<cr>
-nmap <leader>lc :e composer.json<cr>
 
 " Prepare a new PHP class
 function! Class()
