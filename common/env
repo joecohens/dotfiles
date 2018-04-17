@@ -1,20 +1,32 @@
-# Configuraciones de PATH
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+# Set editor
+export EDITOR="nvim"
 
-# Configuración de Lenguaje
+# Set env lang
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-# Scripting RVM, NVM, GVM, Composer, Heroku
-export PATH="~/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Scripting Composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# Scripting NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Scripting rbenv
+eval "$(rbenv init -)"
+
+# Scripting GO
+export GOPATH="$HOME/.go"
+export GOROOT=/usr/local/opt/go/libexecj
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOROOT/bin"
+
+# Scripting Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Setting up the VirtualEnv for python
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
