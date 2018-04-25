@@ -6,6 +6,8 @@ Configuration for zsh, bash and vim using oh-my-zsh.
 
 - Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - Install [bash-it](https://github.com/Bash-it/bash-it)
+- Install [Vundle](https://github.com/VundleVim/Vundle.vim)
+- Install [tpm](https://github.com/tmux-plugins/tpm)
 - Install (optional) [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - Configure .dotfiles:
 
@@ -37,12 +39,22 @@ bash-it enable completion git brew composer npm
 
 ```bash
 ln -s ~/.dotfiles/vimrc ~/.vimrc
+:VundleInstall
 ```
 
 ### NeoVim
 
 ```bash
 ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/vimrc ~/.vimrc
+:VundleInstall
+```
+
+### tmux
+
+```bash
+ln -s ~/.dotfiles/tmux ~/.tmux.conf
+prefix + I
 ```
 
 ### Extras
