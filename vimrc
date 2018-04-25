@@ -12,11 +12,13 @@ Plugin 'VundleVim/Vundle.vim'
 "---------Plugins--------"
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'ervandew/supertab'
+Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
@@ -27,10 +29,16 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'raimondi/delimitmate'
+Plugin 'alvan/vim-closetag'
+Plugin 'christoomey/vim-tmux-navigator'
 "---------Themes--------"
 Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'herrbischoff/cobalt2.vim'
+Plugin 'Addisonbean/Vim-Xcode-Theme'
+Plugin 'vim-scripts/bw.vim'
+Plugin 'herrbischoff/cobalt2.vim'
 "---------Lang Support--------"
+
 Plugin 'sheerun/vim-polyglot'
 "---------Snippets--------"
 Plugin 'tomtom/tlib_vim'
@@ -56,15 +64,16 @@ filetype plugin indent on    " required
 
 "---------Theme--------"
 
-" Airline (Fancy thingy at bottom stuff)
 set laststatus=2                            " Always show the statusline
 set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set showcmd                                 " Show (partial) command in the status line
 
 syntax enable
-set termguicolors
-set background=dark
-" colorscheme cobalt2
+" set termguicolors
+set background="dark"
+colorscheme bw
+let g:airline_theme="minimalist"
+hi LineNr cterm=NONE ctermfg=DarkGray
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -117,12 +126,6 @@ nmap <Leader><space> :nohlsearch<cr>
 set splitbelow                               " Make splits default to below...
 set splitright                               " And to the right. This feels more natural.
 
-" We'll set simpler mappings to switch between splits.
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
-
 "---------Mappings--------"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>       " Make it easy to edit the Vimrc file.
 imap jj <esc>                               " Easy escaping to normal model
@@ -162,6 +165,9 @@ endif
 nmap <Leader>n :NERDTreeToggle<cr>          " Toggle nerd tree
 nmap <Leader>r :NERDTreeFind<cr>
 let NERDTreeHijackNetrw = 0
+
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 "---------PHP-Helpers--------"
 map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
