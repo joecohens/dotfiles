@@ -115,6 +115,8 @@ set nowrap                                  " don't wrap lines
 set mouse=a
 set tags=.tags
 
+set expandtab
+
 "---------Search--------"
 set hlsearch
 set incsearch
@@ -128,7 +130,7 @@ set splitright                               " And to the right. This feels more
 
 "---------Mappings--------"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>       " Make it easy to edit the Vimrc file.
-imap jj <esc>                               " Easy escaping to normal model
+imap jj <esc><cr>                           " Easy escaping to normal model
 
 nmap <Leader>bp :BufSurfBack<cr>            " Quickly go backward to buffer
 nmap <Leader>bn :BufSurfForward<cr>         " Quickly go forward to buffer
