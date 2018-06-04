@@ -10,6 +10,7 @@ set -g default-terminal "xterm-256color"
 set -g status-right '#{prefix_highlight} | %a %Y-%m-%d %H:%M'
 set -g @prefix_highlight_fg 'black'
 set -g @prefix_highlight_bg 'white'
+set-option -g mouse on
 
 # Start window numbers at 1 to match keyboard order with tmux window order
 set -g base-index 1
