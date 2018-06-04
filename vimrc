@@ -32,6 +32,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'raimondi/delimitmate'
 Plugin 'alvan/vim-closetag'
 Plugin 'christoomey/vim-tmux-navigator'
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
 "---------Themes--------"
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
@@ -97,6 +104,9 @@ set visualbell           " don't beep
 set noerrorbells         " don't beep
 
 "---------General Settings--------"
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 nnoremap ; :
 
 let mapleader = ","
@@ -129,8 +139,8 @@ set splitbelow                               " Make splits default to below...
 set splitright                               " And to the right. This feels more natural.
 
 "---------Mappings--------"
+inoremap jj <Esc>
 nmap <Leader>ev :tabedit $MYVIMRC<cr>       " Make it easy to edit the Vimrc file.
-imap jj <esc><cr>                           " Easy escaping to normal model
 
 nmap <Leader>bp :BufSurfBack<cr>            " Quickly go backward to buffer
 nmap <Leader>bn :BufSurfForward<cr>         " Quickly go forward to buffer
@@ -147,6 +157,7 @@ augroup END
 
 "---------Plugins-Config--------"
 let g:airline#extensions#ale#enabled = 1
+let g:deoplete#enable_at_startup = 1
 
 if executable('ag')
   " Use Ag over Grep
