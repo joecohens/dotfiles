@@ -20,7 +20,11 @@ git clone git@github.com:joecohens/dotfiles.git
 ```bash
 echo "source ~/.dotfiles/zshrc" >> ~/.zshrc
 mkdir ~/.oh-my-zsh/custom/themes
+
 ln -s ~/.dotfiles/zsh/themes/joe.zsh-theme ~/.oh-my-zsh/custom/themes/joe.zsh-theme
+# or/and
+ln -s ~/.dotfiles/zsh/themes/joe-inv.zsh-theme ~/.oh-my-zsh/custom/themes/joe-inv.zsh-theme
+
 plugins=(git git-extras brew npm sublime composer zsh-autosuggestions)
 ```
 
@@ -28,8 +32,13 @@ plugins=(git git-extras brew npm sublime composer zsh-autosuggestions)
 
 ```bash
 echo "source ~/.dotfiles/bashrc" >> ~/.bashrc
+
 mkdir -p ~/.bash_it/custom/themes/joe
 ln -s ~/.dotfiles/bash/themes/joe.theme.bash ~/.bash_it/custom/themes/joe/joe.theme.bash
+# or/and
+mkdir -p ~/.bash_it/custom/themes/joe-inv
+ln -s ~/.dotfiles/bash/themes/joe-inv.theme.bash ~/.bash_it/custom/themes/joe-inv/joe-inv.theme.bash
+
 bash-it enable plugin git
 bash-it enable alias git homebrew npm
 bash-it enable completion git brew composer npm
