@@ -5,10 +5,10 @@ alias c="clear"
 alias lt="ls -ltFh"
 
 # Edit dotfiles with vim
-alias vim="nvim"
+alias v="nvim"
 
 # Edit dotfiles with vim
-alias dotfiles="vim ~/.dotfiles/"
+alias dotfiles="v ~/.dotfiles/"
 
 # Laravel
 alias art="php artisan"
