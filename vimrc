@@ -89,6 +89,8 @@ if has("gui_running")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
+  else
+    set guifont=Menlo\ Regular:h14
   endif
 endif
 
@@ -146,6 +148,10 @@ nmap <Leader>bp :BufSurfBack<cr>            " Quickly go backward to buffer
 nmap <Leader>bn :BufSurfForward<cr>         " Quickly go forward to buffer
 
 vmap s S                                    " Surround Vim
+
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+endif
 
 "---------Auto-Commands--------"
 
