@@ -31,6 +31,7 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'raimondi/delimitmate'
 Plugin 'alvan/vim-closetag'
+Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 if has('nvim')
   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -45,8 +46,8 @@ Plugin 'Addisonbean/Vim-Xcode-Theme'
 Plugin 'vim-scripts/bw.vim'
 Plugin 'herrbischoff/cobalt2.vim'
 "---------Lang Support--------"
-
 Plugin 'sheerun/vim-polyglot'
+Plugin 'alampros/vim-styled-jsx'
 "---------Snippets--------"
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -187,6 +188,15 @@ let NERDTreeHijackNetrw = 0
 
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+let g:jsx_ext_required = 0
 
 "---------PHP-Helpers--------"
 map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
