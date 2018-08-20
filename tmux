@@ -5,12 +5,17 @@ set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 
+# Resurrect for vim & neovim
+set -g @resurrect-strategy-vim 'session'
+set -g @resurrect-strategy-nvim 'session'
+
 # Global config
 set -g default-terminal "xterm-256color"
 set -g status-right '#{prefix_highlight} | %a %Y-%m-%d %H:%M'
 set -g @prefix_highlight_fg 'black'
 set -g @prefix_highlight_bg 'white'
 set-option -g mouse on
+set-window-option -g mode-keys vi
 
 # Start window numbers at 1 to match keyboard order with tmux window order
 set -g base-index 1
