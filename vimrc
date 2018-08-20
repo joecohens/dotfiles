@@ -95,8 +95,8 @@ if has("gui_running")
   endif
 endif
 
-set list
-set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+" set list
+" set listchars=tab:>.,trail:.,extends:\#,nbsp:.
 
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
@@ -128,6 +128,8 @@ set nowrap                                  " don't wrap lines
 set mouse=a
 set tags=.tags
 
+set smartindent
+set shiftwidth=2
 set expandtab
 
 "---------Search--------"
