@@ -45,6 +45,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
 Plugin 'vim-scripts/bw.vim'
 Plugin 'herrbischoff/cobalt2.vim'
+Plugin 'zaki/zazen'
+Plugin 'fxn/vim-monochrome'
 "---------Lang Support--------"
 Plugin 'sheerun/vim-polyglot'
 Plugin 'alampros/vim-styled-jsx'
@@ -78,8 +80,8 @@ set showcmd                                 " Show (partial) command in the stat
 
 syntax enable
 " set termguicolors
-set background="dark"
-colorscheme bw
+set background="black"
+colorscheme monochrome
 let g:airline_theme="minimalist"
 hi LineNr cterm=NONE ctermfg=DarkGray
 
@@ -125,7 +127,7 @@ set undodir=~/.vim-undo
 set number                                  " always show line numbers
 set backspace=indent,eol,start              " allow backspacing over everything in insert mode
 set nowrap                                  " don't wrap lines
-set mouse=a
+" set mouse=a
 set tags=.tags
 
 set smartindent
