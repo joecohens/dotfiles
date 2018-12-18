@@ -69,6 +69,6 @@ prefix + I
 ### Extras
 
 ```bash
-ln -s ~/.dotfiles/gitignore ~/.global_gitignore
+ln -s ~/.dotfiles/gitignore ~/.gitignore_global
 ln -s ~/.dotfiles/agignore ~/.agignore
 ```

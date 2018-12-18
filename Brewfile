@@ -24,8 +24,8 @@ brew "zsh-completions"
 # Apps
 cask "alfred"
 cask "authy"
-cask "cleanmymac"
 cask "bartender"
+cask "cleanmymac"
 cask "docker"
 cask "droplr"
 cask "github"
@@ -41,6 +41,7 @@ cask "sketch"
 cask "slack"
 cask "spotify"
 cask "sublime-text"
+cask "tableplus"
 cask "visual-studio-code"
 
 # App store
