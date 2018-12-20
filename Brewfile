@@ -44,6 +44,7 @@ cask "slack"
 cask "spotify"
 cask "sublime-text"
 cask "tableplus"
+cask "transmit"
 cask "visual-studio-code"
 
 # App store
