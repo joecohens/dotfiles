@@ -22,3 +22,6 @@ alias tc="vendor/bin/codecept run"
 
 # Git
 alias nah="git reset --hard; git clean -df;"
+
+# Kubernetes
+alias k="kubectl"

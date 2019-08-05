@@ -13,16 +13,16 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-unimpaired'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-dispatch'
@@ -33,15 +33,15 @@ Plugin 'raimondi/delimitmate'
 Plugin 'alvan/vim-closetag'
 Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
-if has('nvim')
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'roxma/nvim-yarp'
-  Plugin 'roxma/vim-hug-neovim-rpc'
-endif
+" if has('nvim')
+"   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plugin 'Shougo/deoplete.nvim'
+"   Plugin 'roxma/nvim-yarp'
+"   Plugin 'roxma/vim-hug-neovim-rpc'
+" endif
 "---------Themes--------"
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Addisonbean/Vim-Xcode-Theme'
 Plugin 'vim-scripts/bw.vim'
 Plugin 'herrbischoff/cobalt2.vim'
@@ -51,7 +51,7 @@ Plugin 'fxn/vim-monochrome'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'alampros/vim-styled-jsx'
 "---------Snippets--------"
-Plugin 'tomtom/tlib_vim'
+" Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
@@ -80,9 +80,9 @@ set showcmd                                 " Show (partial) command in the stat
 
 syntax enable
 " set termguicolors
-set background="black"
-colorscheme monochrome
-let g:airline_theme="minimalist"
+" set background="black"
+" colorscheme monochrome
+" let g:airline_theme="minimalist"
 hi LineNr cterm=NONE ctermfg=DarkGray
 
 if has("gui_running")
@@ -107,6 +107,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
+set t_vb=
 
 "---------General Settings--------"
 let g:python2_host_prog = '/usr/local/bin/python'
@@ -167,8 +168,9 @@ augroup autosourcin
 augroup END
 
 "---------Plugins-Config--------"
-let g:airline#extensions#ale#enabled = 1
-let g:deoplete#enable_at_startup = 1
+" let g:airline#extensions#ale#enabled = 1
+" let g:deoplete#enable_at_startup = 1
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\.(swp|ico|git|svn))$'
 
 if executable('ag')
   " Use Ag over Grep

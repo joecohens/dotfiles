@@ -17,7 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Scripting rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Scripting GO
 export GOPATH="$HOME/.go"
@@ -29,13 +29,13 @@ export PATH="$PATH:$GOROOT/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Setting up the VirtualEnv for python
-export WORKON_HOME="$HOME/.virtualenvs"
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export WORKON_HOME="$HOME/.virtualenvs"
+# export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# export PIP_RESPECT_VIRTUALENV=true
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
-if [[ -r "/usr/local/bin/virtualenvwrapper.sh" ]]; then
-	source "/usr/local/bin/virtualenvwrapper.sh"
-else
-	echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
+# if [[ -r "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+#         source "/usr/local/bin/virtualenvwrapper.sh"
+# else
+#         echo "WARNING: Can't find virtualenvwrapper.sh"
+# fi
