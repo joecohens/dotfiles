@@ -5,10 +5,7 @@ alias c="clear"
 alias lt="ls -ltFh"
 
 # Edit dotfiles with vim
-alias v="nvim"
-
-# Edit dotfiles with vim
-alias dotfiles="v ~/.dotfiles/"
+alias dotfiles="vi ~/.dotfiles/"
 
 # Laravel
 alias art="php artisan"
@@ -25,3 +22,6 @@ alias nah="git reset --hard; git clean -df;"
 
 # Kubernetes
 alias k="kubectl"
+
+# Performance
+alias headers="httpstat"

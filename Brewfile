@@ -9,6 +9,7 @@ brew "bash" # Bash 4
 brew "bat"
 brew "coreutils" # Those that come with macOS are outdated
 brew "git"
+brew "git-lfs"
 brew "git-extras"
 brew "gnupg2"
 brew "grep"
@@ -18,6 +19,7 @@ brew "pkg-config" # https://github.com/driesvints/dotfiles/issues/20
 brew "trash"
 brew "tree"
 brew "tmux"
+brew "vlc"
 brew "zsh"
 brew "zsh-completions"
 

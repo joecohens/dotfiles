@@ -53,7 +53,7 @@ Plugin 'alampros/vim-styled-jsx'
 "---------Snippets--------"
 " Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 " Plugin 'joecohens/joe-snippets-vim'
 
