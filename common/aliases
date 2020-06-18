@@ -14,14 +14,14 @@ alias tinker="php artisan tinker"
 # PHP testing
 alias phpunit="vendor/bin/phpunit"
 alias t="clear && vendor/bin/phpunit -d memory_limit=512M"
-alias ts="vendor/bin/phpspec run"
-alias tc="vendor/bin/codecept run"
+# alias ts="vendor/bin/phpspec run"
+# alias tc="vendor/bin/codecept run"
 
 # Git
 alias nah="git reset --hard; git clean -df;"
 
 # Kubernetes
-alias k="kubectl"
+alias k.old="kubectl.old"
 
 # Performance
 alias headers="httpstat"

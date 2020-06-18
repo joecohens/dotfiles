@@ -8,6 +8,7 @@ brew "awscli"
 brew "bash" # Bash 4
 brew "bat"
 brew "coreutils" # Those that come with macOS are outdated
+brew "fzf"
 brew "git"
 brew "git-lfs"
 brew "git-extras"
@@ -20,6 +21,7 @@ brew "trash"
 brew "tree"
 brew "tmux"
 brew "vlc"
+brew "watch"
 brew "zsh"
 brew "zsh-completions"
 

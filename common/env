@@ -39,3 +39,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # else
 #         echo "WARNING: Can't find virtualenvwrapper.sh"
 # fi
+
+# Setting up fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
