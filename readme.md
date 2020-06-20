@@ -25,12 +25,21 @@ ln -s ~/.dotfiles/zsh/themes/joe.zsh-theme ~/.oh-my-zsh/custom/themes/joe.zsh-th
 # or/and
 ln -s ~/.dotfiles/zsh/themes/joe-inv.zsh-theme ~/.oh-my-zsh/custom/themes/joe-inv.zsh-theme
 
-plugins=(git git-extras brew npm sublime composer zsh-autosuggestions)
+plugins=(
+  brew
+  composer
+  kubectl
+  git
+  git-extras
+  npm
+  zsh-autosuggestions
+)
 ```
 
 ### Bash
 
 ```bash
+rm ~/.bash_profile
 echo "source ~/.dotfiles/bashrc" >> ~/.bashrc
 
 mkdir -p ~/.bash_it/custom/themes/joe
@@ -47,7 +56,9 @@ bash-it enable completion git brew composer npm
 ### Vim
 
 ```bash
+ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
+# Install Vundle
 :VundleInstall
 ```
 
