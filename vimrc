@@ -193,7 +193,8 @@ nmap <Leader>r :NERDTreeFind<cr>
 let NERDTreeHijackNetrw = 0
 
 let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
+let g:NERDDefaultAlign = 'right'
+let g:NERDTreeWinPos = "right"
 
 let g:user_emmet_expandabbr_key='<Tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")

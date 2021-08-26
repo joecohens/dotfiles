@@ -44,9 +44,13 @@ cask "insomnia"
 cask "iterm2"
 cask "kap"
 cask "keybase"
+cask "pdf-expert"
 cask "pixelsnap"
 cask "postico"
+cask "ngrok"
 cask "nordvpn"
+cask "raycast"
+cask "rectangle"
 cask "rightfont"
 cask "sequel-pro"
 cask "sip"
@@ -56,6 +60,7 @@ cask "spotify"
 cask "sublime-text"
 cask "tableplus"
 cask "telegram"
+cask "tor-browser"
 cask "transmit"
 cask "visual-studio-code"
 cask "vlc"
@@ -77,3 +82,4 @@ mas 'Gifski', id: 1351639930
 mas 'Gifox', id: 1082624744
 mas 'Asset Catalog Create', id: 866571115
 mas 'Svgsus', id: 1106867065
+mas 'Sequel Ace', id: 1518036000
