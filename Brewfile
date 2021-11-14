@@ -38,6 +38,7 @@ cask "deckset"
 cask "discord"
 cask "docker"
 cask "droplr"
+cask "fliqlo"
 cask "github"
 cask "google-cloud-sdk"
 cask "insomnia"
@@ -64,6 +65,7 @@ cask "tor-browser"
 cask "transmit"
 cask "visual-studio-code"
 cask "vlc"
+cask "whatsapp"
 
 # App store
 mas 'Encrypto', id: 935235287
