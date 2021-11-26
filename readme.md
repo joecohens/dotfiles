@@ -1,28 +1,25 @@
 # Dotfiles
 
-Configuration for zsh, bash and vim using oh-my-zsh.
+Dotfiles for easy MacOS setup.
 
-## Instalation
-
-- Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- Install [bash-it](https://github.com/Bash-it/bash-it)
-- Install [Vundle](https://github.com/VundleVim/Vundle.vim)
-- Install [tpm](https://github.com/tmux-plugins/tpm)
-- Install (optional) [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- Configure .dotfiles:
+## Setup
 
 ```bash
-git clone git@github.com:joecohens/dotfiles.git
+git clone git@github.com:joecohens/dotfiles.git .dotfiles
 ```
 
-### Zsh
+### zsh
+
+Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```bash
 echo "source ~/.dotfiles/zshrc" >> ~/.zshrc
+# If needed create the theam folder first, it might be already created for you.
 mkdir ~/.oh-my-zsh/custom/themes
 
+# Install oh-my-zsh custom themes
 ln -s ~/.dotfiles/zsh/themes/joe.zsh-theme ~/.oh-my-zsh/custom/themes/joe.zsh-theme
-# or/and
+# and/or
 ln -s ~/.dotfiles/zsh/themes/joe-inv.zsh-theme ~/.oh-my-zsh/custom/themes/joe-inv.zsh-theme
 
 plugins=(
@@ -38,13 +35,15 @@ plugins=(
 
 ### Bash
 
+Install [bash-it](https://github.com/Bash-it/bash-it)
+
 ```bash
-rm ~/.bash_profile
 echo "source ~/.dotfiles/bashrc" >> ~/.bashrc
 
+# Install bash custom themes
 mkdir -p ~/.bash_it/custom/themes/joe
 ln -s ~/.dotfiles/bash/themes/joe.theme.bash ~/.bash_it/custom/themes/joe/joe.theme.bash
-# or/and
+# and/or
 mkdir -p ~/.bash_it/custom/themes/joe-inv
 ln -s ~/.dotfiles/bash/themes/joe-inv.theme.bash ~/.bash_it/custom/themes/joe-inv/joe-inv.theme.bash
 
@@ -53,16 +52,19 @@ bash-it enable alias git homebrew npm
 bash-it enable completion git brew composer npm
 ```
 
-### Vim
+### Vim or NeoVim
+
+Install [Vundle](https://github.com/VundleVim/Vundle.vim)
+
+#### Vim
 
 ```bash
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
-# Install Vundle
 :VundleInstall
 ```
 
-### NeoVim
+#### NeoVim
 
 ```bash
 ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
@@ -72,12 +74,25 @@ ln -s ~/.dotfiles/vimrc ~/.vimrc
 
 ### tmux
 
+Install [tpm](https://github.com/tmux-plugins/tpm)
+
 ```bash
 ln -s ~/.dotfiles/tmux ~/.tmux.conf
 prefix + I
 ```
 
+### Homebrew
+
+Install [Homebrew](https://brew.sh)
+
+```bash
+cd ~/.dotfiles
+brew bundle
+```
+
 ### Extras
+
+Install (optional) [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```bash
 ln -s ~/.dotfiles/gitignore ~/.gitignore_global
