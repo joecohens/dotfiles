@@ -28,6 +28,7 @@ brew "zsh-completions"
 
 # Apps
 cask "alfred"
+cask "android-studio"
 cask "authy"
 cask "bartender"
 cask "brave-browser"
@@ -43,19 +44,17 @@ cask "github"
 cask "google-cloud-sdk"
 cask "insomnia"
 cask "iterm2"
-cask "kap"
 cask "keybase"
 cask "pdf-expert"
 cask "pixelsnap"
 cask "postico"
 cask "ngrok"
 cask "nordvpn"
+cask "messenger"
 cask "raycast"
 cask "rectangle"
 cask "rightfont"
-cask "sequel-pro"
 cask "sip"
-cask "sketch"
 cask "slack"
 cask "spotify"
 cask "sublime-text"
@@ -66,15 +65,14 @@ cask "transmit"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+cask "zoom"
 
 # App store
 mas 'Encrypto', id: 935235287
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Thor', id: 1120999687
 mas 'Permute' , id: 731738567
 mas 'Unsplash Wallpaper', id: 1284863847
 mas 'Keynote', id: 409183694
-mas 'Magnet', id: 441258766
 mas 'Amphetamine', id: 937984704
 mas 'Contrast', id: 1254981365
 mas 'Patterns', id: 429449079
