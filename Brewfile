@@ -83,3 +83,4 @@ mas 'Gifox', id: 1082624744
 mas 'Asset Catalog Create', id: 866571115
 mas 'Svgsus', id: 1106867065
 mas 'Sequel Ace', id: 1518036000
+mas 'RetroClip', id: 1332064978
