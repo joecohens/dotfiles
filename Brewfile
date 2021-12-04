@@ -68,19 +68,21 @@ cask "whatsapp"
 cask "zoom"
 
 # App store
-mas 'Encrypto', id: 935235287
-mas 'Pixelmator Pro', id: 1289583905
-mas 'Permute' , id: 731738567
-mas 'Unsplash Wallpaper', id: 1284863847
-mas 'Keynote', id: 409183694
 mas 'Amphetamine', id: 937984704
-mas 'Contrast', id: 1254981365
-mas 'Patterns', id: 429449079
-mas 'Medis', id: 1063631769
+mas 'Asset Catalog Create', id: 866571115
 mas 'Bear', id: 1091189122
+mas 'Contrast', id: 1254981365
+mas 'Encrypto', id: 935235287
 mas 'Gifski', id: 1351639930
 mas 'Gifox', id: 1082624744
-mas 'Asset Catalog Create', id: 866571115
+mas 'Keynote', id: 409183694
+mas 'Medis', id: 1063631769
+mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft Word', id: 462054704
+mas 'Patterns', id: 429449079
+mas 'Pixelmator Pro', id: 1289583905
+mas 'Permute' , id: 731738567
+mas 'RetroClip', id: 1332064978
 mas 'Svgsus', id: 1106867065
 mas 'Sequel Ace', id: 1518036000
-mas 'RetroClip', id: 1332064978
+mas 'Unsplash Wallpaper', id: 1284863847
