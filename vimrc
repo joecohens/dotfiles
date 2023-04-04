@@ -50,7 +50,7 @@ call plug#end()            " required
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 
 "---------Theme--------"
 
@@ -61,7 +61,7 @@ set showcmd                                 " Show (partial) command in the stat
 syntax enable
 " set termguicolors
 " set background="black"
-hi LineNr cterm=NONE ctermfg=DarkGray
+" hi LineNr cterm=NONE ctermfg=DarkGray
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -75,6 +75,8 @@ if has("gui_running")
   endif
 endif
 
+"---------General Settings--------"
+
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 
@@ -84,7 +86,6 @@ set visualbell           " don't beep
 set noerrorbells         " don't beep
 set t_vb=
 
-"---------General Settings--------"
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
