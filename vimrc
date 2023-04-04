@@ -1,64 +1,59 @@
 set encoding=utf-8
 set nocompatible
 filetype off
+set re=0
 
-"---------Vundle--------"
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"---------vim-plug--------"
+call plug#begin('~/.vim/bundle')
 
 "---------Plugins--------"
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-" Plugin 'vim-airline/vim-airline'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'jeetsukumaran/vim-buffergator'
-" Plugin 'tpope/vim-unimpaired'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-" Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-surround'
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'ap/vim-css-color'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-dispatch'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'w0rp/ale'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'raimondi/delimitmate'
-Plugin 'alvan/vim-closetag'
-Plugin 'mattn/emmet-vim'
-Plugin 'christoomey/vim-tmux-navigator'
-" if has('nvim')
-"   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plugin 'Shougo/deoplete.nvim'
-"   Plugin 'roxma/nvim-yarp'
-"   Plugin 'roxma/vim-hug-neovim-rpc'
-" endif
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jeetsukumaran/vim-buffergator'
+" Plug 'tpope/vim-unimpaired'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+" Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
+Plug 'ap/vim-css-color'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-dispatch'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'raimondi/delimitmate'
+Plug 'alvan/vim-closetag'
+Plug 'mattn/emmet-vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'github/copilot.vim'
+
+if has('nvim')
+  Plug 'nvim-lualine/lualine.nvim'
+  " If you want to have icons in your statusline choose one of these
+  Plug 'nvim-tree/nvim-web-devicons'
+endif
+
 "---------Themes--------"
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Addisonbean/Vim-Xcode-Theme'
-Plugin 'vim-scripts/bw.vim'
-Plugin 'herrbischoff/cobalt2.vim'
-Plugin 'zaki/zazen'
-Plugin 'fxn/vim-monochrome'
-"---------Lang Support--------"
-Plugin 'sheerun/vim-polyglot'
-Plugin 'alampros/vim-styled-jsx'
+Plug 'Addisonbean/Vim-Xcode-Theme'
+Plug 'vim-scripts/bw.vim'
+Plug 'zaki/zazen'
+Plug 'fxn/vim-monochrome'
+
+"--------- Lang Support--------"
+Plug 'sheerun/vim-polyglot'
+Plug 'alampros/vim-styled-jsx'
+
 "---------Snippets--------"
-" Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-" Plugin 'joecohens/joe-snippets-vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'honza/vim-snippets'
+" Plug 'joecohens/joe-snippets-vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -96,9 +91,6 @@ if has("gui_running")
     set guifont=Menlo\ Regular:h14
   endif
 endif
-
-" set list
-" set listchars=tab:>.,trail:.,extends:\#,nbsp:.
 
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
