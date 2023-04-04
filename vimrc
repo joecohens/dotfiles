@@ -7,26 +7,26 @@ set re=0
 call plug#begin('~/.vim/bundle')
 
 "---------Plugins--------"
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'ervandew/supertab'
-Plug 'godlygeek/tabular'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-surround'
-Plug 'ap/vim-css-color'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-dispatch'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
-Plug 'raimondi/delimitmate'
 Plug 'alvan/vim-closetag'
-Plug 'mattn/emmet-vim'
+Plug 'ap/vim-css-color'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
 Plug 'github/copilot.vim'
+Plug 'godlygeek/tabular'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'mattn/emmet-vim'
+Plug 'raimondi/delimitmate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'w0rp/ale'
 " Plug 'tpope/vim-unimpaired'
 
 if has('nvim')
@@ -39,8 +39,8 @@ endif
 
 
 "--------- Lang Support--------"
-Plug 'sheerun/vim-polyglot'
 Plug 'alampros/vim-styled-jsx'
+Plug 'sheerun/vim-polyglot'
 
 "---------Snippets--------"
 Plug 'honza/vim-snippets'
