@@ -12,10 +12,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeetsukumaran/vim-buffergator'
-" Plug 'tpope/vim-unimpaired'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
-" Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
@@ -29,6 +27,7 @@ Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'github/copilot.vim'
+" Plug 'tpope/vim-unimpaired'
 
 if has('nvim')
   Plug 'nvim-lualine/lualine.nvim'
@@ -37,19 +36,14 @@ if has('nvim')
 endif
 
 "---------Themes--------"
-Plug 'Addisonbean/Vim-Xcode-Theme'
-Plug 'vim-scripts/bw.vim'
-Plug 'zaki/zazen'
-Plug 'fxn/vim-monochrome'
+
 
 "--------- Lang Support--------"
 Plug 'sheerun/vim-polyglot'
 Plug 'alampros/vim-styled-jsx'
 
 "---------Snippets--------"
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'honza/vim-snippets'
-" Plug 'joecohens/joe-snippets-vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -57,15 +51,6 @@ call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 "---------Theme--------"
 
@@ -77,7 +62,6 @@ syntax enable
 " set termguicolors
 " set background="black"
 " colorscheme monochrome
-" let g:airline_theme="minimalist"
 hi LineNr cterm=NONE ctermfg=DarkGray
 
 if has("gui_running")
@@ -160,8 +144,6 @@ augroup autosourcin
 augroup END
 
 "---------Plugins-Config--------"
-" let g:airline#extensions#ale#enabled = 1
-" let g:deoplete#enable_at_startup = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\.(swp|ico|git|svn))$'
 
 if executable('ag')
@@ -196,7 +178,3 @@ let g:user_emmet_settings = {
 \  },
 \}
 let g:jsx_ext_required = 0
-
-"---------PHP-Helpers--------"
-map <Leader>t :!phpunit %<cr>               " Run PHPUnit tests
-
