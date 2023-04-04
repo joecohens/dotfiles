@@ -61,7 +61,6 @@ set showcmd                                 " Show (partial) command in the stat
 syntax enable
 " set termguicolors
 " set background="black"
-" colorscheme monochrome
 hi LineNr cterm=NONE ctermfg=DarkGray
 
 if has("gui_running")
