@@ -83,6 +83,7 @@ mas 'Gifox', id: 1082624744
 mas 'Keynote', id: 409183694
 mas 'Medis', id: 1063631769
 mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft PowerPoint', id: 462062816
 mas 'Microsoft Word', id: 462054704
 mas 'Patterns', id: 429449079
 mas 'Pixelmator Pro', id: 1289583905
