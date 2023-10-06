@@ -29,12 +29,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 " Plug 'tpope/vim-unimpaired'
 
-if has('nvim')
-  Plug 'nvim-lualine/lualine.nvim'
-  " If you want to have icons in your statusline choose one of these
-  Plug 'nvim-tree/nvim-web-devicons'
-endif
-
 "---------Themes--------"
 
 
