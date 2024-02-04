@@ -67,7 +67,7 @@ ln -s ~/.dotfiles/vimrc ~/.vimrc
 #### NeoVim
 
 ```bash
-ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 :VundleInstall
 ```
