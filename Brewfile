@@ -1,7 +1,6 @@
 # Taps
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
+tap 'homebrew/cask-versions'
 
 # Binaries
 brew "awscli"
@@ -29,6 +28,7 @@ brew "zsh"
 brew "zsh-completions"
 
 # Apps
+cask '1password'
 cask "android-studio"
 cask "authy"
 cask "bartender"
@@ -39,19 +39,21 @@ cask "cleanshot"
 cask "coderunner"
 cask "deckset"
 cask "discord"
-cask "docker"
 cask "fliqlo"
 cask "github"
 cask "google-cloud-sdk"
+cask 'herd'
 cask "insomnia"
 cask "iterm2"
 cask "keybase"
+cask "orbstack"
 cask "pdf-expert"
 cask "pixelsnap"
 cask "postico"
 cask "postman"
 cask "ngrok"
 cask "notion"
+cask "notion-calendar"
 cask "nordvpn"
 cask "numi"
 cask "messenger"
@@ -62,6 +64,7 @@ cask "sip"
 cask "slack"
 cask "spotify"
 cask "sublime-text"
+cask "superhuman"
 cask "tableplus"
 cask "telegram"
 cask "todoist"
@@ -74,8 +77,6 @@ cask "whatsapp"
 cask "zoom"
 
 # App store
-mas 'Amphetamine', id: 937984704
-mas 'Asset Catalog Create', id: 866571115
 mas 'Bear', id: 1091189122
 mas 'Contrast', id: 1254981365
 mas 'Encrypto', id: 935235287
