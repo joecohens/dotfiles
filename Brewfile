@@ -31,9 +31,9 @@ brew "zsh-completions"
 # Apps
 cask '1password'
 cask "android-studio"
-cask "authy"
 cask "bartender"
 cask "betterdisplay"
+cask "bezel"
 cask "brave-browser"
 cask "cleanmymac"
 cask "cleanshot"
@@ -43,7 +43,7 @@ cask "discord"
 cask "fliqlo"
 cask "github"
 cask "google-cloud-sdk"
-cask 'herd'
+cask "herd"
 cask "insomnia"
 cask "iterm2"
 cask "keybase"
@@ -80,9 +80,6 @@ cask "zoom"
 # App store
 mas 'Bear', id: 1091189122
 mas 'Contrast', id: 1254981365
-mas 'Encrypto', id: 935235287
-mas 'Gifski', id: 1351639930
-mas 'Gifox', id: 1082624744
 mas 'Keynote', id: 409183694
 mas 'Medis', id: 1063631769
 mas 'Microsoft Excel', id: 462058435
@@ -92,6 +89,5 @@ mas 'Patterns', id: 429449079
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Permute' , id: 731738567
 mas 'RetroClip', id: 1332064978
-mas 'Svgsus', id: 1106867065
 mas 'Sequel Ace', id: 1518036000
 mas 'Unsplash Wallpaper', id: 1284863847
