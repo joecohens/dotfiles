@@ -1,12 +1,25 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    main = "ibl",
     enabled = true,
-    opts = {
-        -- char = "▏",
-        char = "│",
-        filetype_exclude = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy" },
-        show_trailing_blankline_indent = false,
-        show_current_context = false,
-    },
+    opts = {},
+    config = function()
+        local exclude_ft = { "help", "git", "markdown", "snippets", "text", "gitconfig", "alpha", "dashboard" }
+
+        require("ibl").setup {
+            indent = {
+                -- -- U+2502 may also be a good choice, it will be on the middle of cursor.
+                -- -- U+250A is also a good choice
+                char = "|",
+            },
+            scope = {
+                show_start = false,
+                show_end = false,
+            },
+            exclude = {
+                filetypes = exclude_ft,
+                buftypes = { "terminal" },
+            },
+        }
+    end,
 }
