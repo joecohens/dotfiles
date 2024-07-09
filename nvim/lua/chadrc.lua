@@ -5,8 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "onedark",
-  theme_toggle = { "onedark", "onedark" },
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "catppuccin" },
 
   statusline = {
     order = {
