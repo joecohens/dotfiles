@@ -43,3 +43,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Setting up fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Setup zoxide
+eval "$(zoxide init zsh)"
+

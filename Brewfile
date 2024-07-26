@@ -17,6 +17,7 @@ brew "gnupg2"
 brew "grep"
 brew "httpstat"
 brew "jq"
+brew "lazygit"
 brew "mas"
 brew "mtr"
 brew "neovim"
@@ -25,11 +26,12 @@ brew "trash"
 brew "tree"
 brew "tmux"
 brew "watch"
+brew "zoxide"
 brew "zsh"
 brew "zsh-completions"
 
 # Apps
-cask '1password'
+cask "1password"
 cask "android-studio"
 cask "bartender"
 cask "betterdisplay"
@@ -61,7 +63,6 @@ cask "messenger"
 cask "minisim"
 cask "raycast"
 cask "rectangle"
-cask "sip"
 cask "slack"
 cask "spotify"
 cask "sublime-text"
@@ -87,7 +88,6 @@ mas 'Microsoft PowerPoint', id: 462062816
 mas 'Microsoft Word', id: 462054704
 mas 'Patterns', id: 429449079
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Permute' , id: 731738567
 mas 'RetroClip', id: 1332064978
 mas 'Sequel Ace', id: 1518036000
 mas 'Unsplash Wallpaper', id: 1284863847
