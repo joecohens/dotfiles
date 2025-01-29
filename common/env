@@ -9,6 +9,9 @@ export LANG="en_US.UTF-8"
 export PATH="/usr/local/sbin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Set XDC Path
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Scripting Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
@@ -46,4 +49,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Setup zoxide
 eval "$(zoxide init zsh)"
+
+# Shell config
+bindkey "^H" backward-delete-word #zsh
+stty werase '^h' #bash
+
 
