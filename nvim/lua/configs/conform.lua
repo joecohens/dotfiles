@@ -17,4 +17,4 @@ local options = {
   },
 }
 
-require("conform").setup(options)
+return options
