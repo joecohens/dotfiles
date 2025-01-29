@@ -4,9 +4,9 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "catppuccin" },
+M.base46 = {
+  theme = "aquarium",
+  theme_toggle = { "aquarium", "aquarium" },
 
   statusline = {
     order = {
