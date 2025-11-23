@@ -5,8 +5,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "aquarium",
-  theme_toggle = { "aquarium", "aquarium" },
+  theme = "github_dark",
+  theme_toggle = { "github_dark", "github_dark" },
 
   statusline = {
     order = {

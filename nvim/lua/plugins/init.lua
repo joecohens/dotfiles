@@ -10,7 +10,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -31,7 +30,6 @@ return {
       ensure_installed = {
         "typescript-language-server",
         "lua-language-server",
-        "rust-analyzer",
         "intelephense",
         "stylua",
         "html-lsp",
