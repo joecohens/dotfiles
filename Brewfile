@@ -38,7 +38,7 @@ cask "cleanmymac"
 cask "cleanshot"
 cask "coderunner"
 cask "codex"
-cask "codex-app"
+cask "codex"
 cask "cursor"
 cask "deckset"
 cask "discord"
@@ -68,7 +68,7 @@ cask "slack"
 cask "spotify"
 cask "superhuman"
 cask "tableplus"
-cask "tailscale"
+cask "tailscale-app"
 cask "telegram"
 cask "todoist-app"
 cask "transmit"
@@ -80,7 +80,6 @@ cask "zoom"
 
 # App store
 mas 'Bear', id: 1091189122
-mas 'Keynote', id: 409183694
 mas 'Microsoft Excel', id: 462058435
 mas 'Microsoft PowerPoint', id: 462062816
 mas 'Microsoft Word', id: 462054704
